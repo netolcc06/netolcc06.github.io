@@ -48,7 +48,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Rays
 --------
 
-![     ](pics/ex01.png width="40%")
+![     ](pics/rays.png width="40%")
 This [code](https://github.com/netolcc06/Rays) reads a polygon with $n$ vertices $(v_x, v_y) \mid (-1 \leq v_x \leq 1)$ and 
 $(-1 \leq v_y \leq 1)$ and generates $64$ lines that may or not cross the polygon. The parts of the lines inside the polygon 
 are colored green and the outside parts are colored gray.
@@ -62,7 +62,7 @@ screen/window space.
 My solution has one flaw. When a line intersects a polygon right at one of its corners without getting inside
 of the polygon itself, it will change the color line anyway. I didn't get a simple solution for this for
 myself. If the polygon was restricted to be convex, this issue would be simplified. You can find detailed discussions
-about my solution in the [Line class](https://github.com/netolcc06/Rays/blob/master/Line.hpp)
+about my solution by reading the comments in the [Line class](https://github.com/netolcc06/Rays/blob/master/Line.hpp).
 
 Maze
 --------
