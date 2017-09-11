@@ -48,9 +48,19 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Rays
 --------
 
-This [code](https://github.com/netolcc06/Rays) reads a polygon with $n$ vertices $(vx, vy) \mid (-1 \leq v_x \leq 1)$ and 
+This [code](https://github.com/netolcc06/Rays) reads a polygon with $n$ vertices $(v_x, v_y) \mid (-1 \leq v_x \leq 1)$ and 
 $(-1 \leq v_y \leq 1)$ and generates $64$ lines that may or not cross the polygon. The parts of the lines inside the polygon 
 are colored green and the outside parts are colored gray.
+Basically, if a line is inside the screen space, it contains at least $2$ intersection points.
+If the line intersects the polygon, it will have more than $2$ intersection points.
+Since the first and the last points intersect walls of the screen/window space, all the other points
+come from intersections with the given polygon.
+Then, as example, taking a line that has $4$ intersection points $(p_0, p_1, p_2, p_3)$, $p0p1$ is outside the polygon,
+$p_1p_2$ is inside the polygon, and $p_2p_3$ is outside the polygon - $p_0$ and $p_3$ are the intersections with the
+screen/window space.
+My solution has one flaw. When a line intersects a polygon right at one of its corners without getting inside
+of the polygon itself, it will change the color line anyway. I didn't get a simple solution for this for
+myself. If the polygon was restricted to be convex, this issue would be simplified.
 
 Maze
 --------
