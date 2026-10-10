@@ -68,6 +68,36 @@ macro crate simplifying term-matching across the codebase, plus test coverage fo
 **[cvc5-monitor](https://monitor-cvc5.stanford.edu/)** — built and operate a Django/Angular benchmarking platform for solver performance, with PAR-2
 scoring, multi-source benchmark support, regression tracking, and automated reporting.
 
+Projects
+=====================================================
+
+Projects I build to study graphics and simulation. All of them run in the browser (C++ compiled to WebAssembly).
+
+Gaussian Splat Renderer
+--------
+
+![     ](pics/gsplat.jpg width="45%")
+A real-time renderer for 3D Gaussian Splatting scenes, written from scratch in C++20 with Vulkan 1.3 and ported to
+WebGPU. It has a compute tile rasterizer, GPU radix sort and prefix scan, exact tile bounds, and compressed scene
+formats. Every optimization is a switchable code path, measured on the GPU and checked against a CPU reference renderer.
+[[Live demo](https://netolcc06.github.io/gsplat-web/)] [[Code](https://github.com/netolcc06/gaussian-splat-renderer)]
+
+ARAP Deformation
+--------
+
+![     ](pics/arap.jpg width="40%")
+As-Rigid-As-Possible surface deformation. A C++/Eigen solver compiled to WebAssembly and rendered with WebGPU:
+grab vertices as handles and drag them, and the mesh bends while keeping its local shape. You can also open your own glTF models.
+[[Live demo](https://netolcc06.github.io/ARAP/)] [[Code](https://github.com/netolcc06/ARAP)]
+
+Fluids
+--------
+
+![     ](pics/fluids.jpg width="45%")
+A fluid simulation sandbox with three water solvers you can switch live: weakly compressible SPH, FLIP and MLS-MPM
+(2D, with SPH also in 3D). The physics core is C++17 compiled to WebAssembly, and rendering is WebGL2.
+[[Live demo](https://netolcc06.github.io/fluids/)] [[Code](https://github.com/netolcc06/fluids)]
+
 Publications
 =====================================================
 
