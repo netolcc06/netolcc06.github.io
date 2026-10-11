@@ -96,6 +96,8 @@ Fluids
 ![     ](pics/fluids.jpg width="45%")
 A fluid simulation sandbox with three water solvers you can switch live: weakly compressible SPH, FLIP and MLS-MPM
 (2D, with SPH also in 3D). The physics core is C++17 compiled to WebAssembly, and rendering is WebGL2.
+This is a work in progress: the solvers still need stability work (especially SPH), and I plan to add surface
+tracking so the water can be rendered as a proper liquid surface instead of particles.
 [[Live demo](https://netolcc06.github.io/fluids/)] [[Code](https://github.com/netolcc06/fluids)]
 
 Publications
