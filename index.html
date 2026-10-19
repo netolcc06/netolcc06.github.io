@@ -100,6 +100,16 @@ This is a work in progress: the solvers still need stability work (especially SP
 tracking so the water can be rendered as a proper liquid surface instead of particles.
 [[Live demo](https://netolcc06.github.io/fluids/)] [[Code](https://github.com/netolcc06/fluids)]
 
+Game Physics in One Weekend
+--------
+
+![     ](pics/physics.jpg width="45%")
+A rigid-body physics engine in C++ that implements Gregory Hodges' [Game Physics in One Weekend](https://gamephysicsweekend.github.io/)
+book series: continuous collision detection, GJK/EPA, a constraint solver with warm-started contact manifolds, and ragdolls,
+hinges and motors. On top of the books, it has a sandbox for spawning bodies at runtime and a profiling pass that made
+scenes with hundreds of bodies 20-30x faster. The same code renders with Vulkan on Windows and with WebGPU in the browser.
+[[Live demo](https://netolcc06.github.io/physics-in-one-weekend/)] [[Code](https://github.com/netolcc06/physics-in-one-weekend)]
+
 Publications
 =====================================================
 
